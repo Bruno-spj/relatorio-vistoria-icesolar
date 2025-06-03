@@ -1,0 +1,17 @@
+@media (max-width: 768px) {
+  .container {
+    margin: 10px;
+  }
+
+  .form-container {
+    padding: 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+}

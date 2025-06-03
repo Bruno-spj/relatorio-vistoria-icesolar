@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/reset.css" />
+    <link rel="stylesheet" href="src/css/responsivo.css" />
+    <title>ICE Solar - Vistoria Técnica</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>FORMULÁRIO DE VISTORIA TÉCNICA</h1>
+        <p>ICE SOLAR - Sistema Profissional</p>
+      </div>
+
+      <div class="form-container">
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <form id="vistoriaForm">
+          <!-- DADOS DO CLIENTE -->
+          <div class="section">
+            <h2 class="section-title">👤 DADOS DO CLIENTE</h2>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Nome: <span class="required">*</span></label>
+                <input type="text" name="cliente_nome" required />
+              </div>
+              <div class="form-group">
+                <label>Contato: <span class="required">*</span></label>
+                <input type="text" name="cliente_contato" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Endereço: <span class="required">*</span></label>
+                <input type="text" name="cliente_endereco" required />
+              </div>
+              <div class="form-group">
+                <label>Cidade: <span class="required">*</span></label>
+                <input type="text" name="cliente_cidade" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Estado:</label>
+                <input type="text" name="cliente_estado" />
+              </div>
+              <div class="form-group">
+                <label>Potência (kWp):</label>
+                <input type="number" step="0.1" name="potencia_kwp" />
+              </div>
+            </div>
+          </div>
+
+          <!-- VISITA TÉCNICA -->
+          <div class="section">
+            <h2 class="section-title">📅 VISITA TÉCNICA</h2>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Data: <span class="required">*</span></label>
+                <input type="date" name="visita_data" required />
+              </div>
+              <div class="form-group">
+                <label>Horário:</label>
+                <input type="time" name="visita_horario" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Consultor Técnico:</label>
+                <input type="text" name="consultor_tecnico" />
+              </div>
+              <div class="form-group">
+                <label>Acompanhante (cliente):</label>
+                <input type="text" name="acompanhante" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Vistoria com Drone:</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="vistoria_drone"
+                    value="sim"
+                    id="drone_sim"
+                  />
+                  <label for="drone_sim">Sim</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="vistoria_drone"
+                    value="nao"
+                    id="drone_nao"
+                  />
+                  <label for="drone_nao">Não</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- LOCALIDADE DO PDE -->
+          <div class="section">
+            <h2 class="section-title">📍 LOCALIDADE DO PDE</h2>
+            <div class="form-group">
+              <label>Coordenadas da Residência/PDE:</label>
+              <input
+                type="text"
+                name="coordenadas"
+                placeholder="Ex: -23.5505, -46.6333"
+              />
+            </div>
+          </div>
+
+          <!-- PADRÃO DE ENTRADA -->
+
+          <div class="section">
+            <h2 class="section-title">⚡ PADRÃO DE ENTRADA - PDE</h2>
+
+            <div class="form-group">
+              <label>Padrão da rede:</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="padrao_rede"
+                    value="monofasico"
+                    id="mono"
+                  />
+                  <label for="mono">Monofásico</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="padrao_rede"
+                    value="bifasico"
+                    id="bi"
+                  />
+                  <label for="bi">Bifásico</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="padrao_rede"
+                    value="trifasico"
+                    id="tri"
+                  />
+                  <label for="tri">Trifásico</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Tensão da rede:</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="tensao_rede"
+                    value="127v"
+                    id="t127"
+                  />
+                  <label for="t127">127V</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="tensao_rede"
+                    value="220v"
+                    id="t220"
+                  />
+                  <label for="t220">220V</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="tensao_rede"
+                    value="380v"
+                    id="t380"
+                  />
+                  <label for="t380">380V</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Tipo de entrada:</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="tipo_entrada"
+                    value="aereo"
+                    id="aereo"
+                  />
+                  <label for="aereo">Aéreo</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="tipo_entrada"
+                    value="subterraneo"
+                    id="subterraneo"
+                  />
+                  <label for="subterraneo">Subterrâneo</label>
+                </div>
+              </div>
+              <textarea
+                name="tipo_entrada_obs"
+                placeholder="Observações sobre tipo de entrada..."
+                rows="2"
+              ></textarea>
+            </div>
+
+            <!-- NOVOS CAMPOS ADICIONADOS AQUI -->
+            <div class="form-group">
+              <label>PDE está no padrão da concessionária?</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="pde_concessionaria"
+                    value="sim"
+                    id="pde_sim"
+                  />
+                  <label for="pde_sim">Sim</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="pde_concessionaria"
+                    value="nao"
+                    id="pde_nao"
+                  />
+                  <label for="pde_nao">Não</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="numero_medidor">Número do medidor:</label>
+              <input
+                type="text"
+                name="numero_medidor"
+                id="numero_medidor"
+                placeholder="Ex: 12345678"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="amperagem_disjuntor">Amperagem do disjuntor PDE:</label>
+              <input
+                type="number"
+                name="amperagem_disjuntor"
+                id="amperagem_disjuntor"
+                placeholder="Ex: 63"
+              />
+            </div>
+          </div>
+
+          <!-- INVERSOR E STRING BOX -->
+          <div class="section">
+            <h2 class="section-title">🔋 INVERSOR E STRING BOX</h2>
+
+            <!-- Sugestão do local de instalação do inversor -->
+            <div class="form-group">
+              <label for="local_inversor"
+                >Local sugerido para instalação do inversor:</label
+              >
+              <input
+                type="text"
+                id="local_inversor"
+                name="local_inversor"
+                placeholder="Ex: Garagem, área técnica, sala de máquinas..."
+              />
+            </div>
+
+            <!-- Verificação de internet no local -->
+            <div class="form-group">
+              <label>Há internet no local?</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="internet_local"
+                    value="sim"
+                    id="internet_sim"
+                  />
+                  <label for="internet_sim">Sim</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="internet_local"
+                    value="nao"
+                    id="internet_nao"
+                  />
+                  <label for="internet_nao">Não</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- MEDIDAS ESTRUTURAIS -->
+          <div class="section">
+            <h2 class="section-title">MEDIDAS ESTRUTURAIS</h2>
+            <div class="form-group">
+              <label>Medidas estruturais:</label>
+              <div class="measurements-grid">
+                <div class="form-group">
+                  <label>Distância entre Terças:</label>
+                  <input type="text" name="dist_tercas" />
+                </div>
+                <div class="form-group">
+                  <label>Distância entre Ripas:</label>
+                  <input type="text" name="dist_ripas" />
+                </div>
+                <div class="form-group">
+                  <label>Distância entre Caibros:</label>
+                  <input type="text" name="dist_caibros" />
+                </div>
+                <div class="form-group">
+                  <label>Comprimento do Telhado:</label>
+                  <input type="text" name="compr_telhado" />
+                </div>
+                <div class="form-group">
+                  <label>Largura do Telhado:</label>
+                  <input type="text" name="larg_telhado" />
+                </div>
+                <div class="form-group">
+                  <label>Inclinação do Telhado (º):</label>
+                  <input type="number" name="inclinacao_telhado" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- SEÇÕES -->
+          <div class="form-group">
+            <label>Seções (em cm x cm):</label>
+            <div class="measurements-grid">
+              <div class="form-group">
+                <label>Terça:</label>
+                <input
+                  type="text"
+                  name="secao_terca"
+                  placeholder="ex: 5 x 15"
+                />
+              </div>
+              <div class="form-group">
+                <label>Caibro:</label>
+                <input
+                  type="text"
+                  name="secao_caibro"
+                  placeholder="ex: 5 x 7"
+                />
+              </div>
+              <div class="form-group">
+                <label>Ripa:</label>
+                <input type="text" name="secao_ripa" placeholder="ex: 1 x 5" />
+              </div>
+              <div class="form-group">
+                <label>Viga:</label>
+                <input
+                  type="text"
+                  name="secao_viga"
+                  placeholder="ex: 12 x 25"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- CONDIÇÕES ESTRUTURAIS -->
+          <div class="section">
+            <h2 class="section-title">🏗️ CONDIÇÕES ESTRUTURAIS</h2>
+            <div class="form-group">
+              <label>Tipo de estrutura do telhado:</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="estrutura_telhado"
+                    value="madeira"
+                    id="est_madeira"
+                  />
+                  <label for="est_madeira">Madeira</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="estrutura_telhado"
+                    value="metalica"
+                    id="est_metalica"
+                  />
+                  <label for="est_metalica">Metálica</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="estrutura_telhado"
+                    value="pre_moldada"
+                    id="est_pre"
+                  />
+                  <label for="est_pre">Pré-moldada</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="estrutura_telhado"
+                    value="laje"
+                    id="est_laje"
+                  />
+                  <label for="est_laje">Laje</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Tipo de telha:</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="estrutura_telhado"
+                    value="ceramica"
+                    id="ceramica"
+                  />
+                  <label for="est_madeira">Cerâmica</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="estrutura_telhado"
+                    value="metalica"
+                    id="est_metalica"
+                  />
+                  <label for="est_metalica">Metálica</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="estrutura_telhado"
+                    value="fibracimento"
+                    id="fibracimento"
+                  />
+                  <label for="est_pre">Fibracimento</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Tipo de telhado:</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="estrutura_telhado"
+                    value="uma-agua"
+                    id="uma-agua"
+                  />
+                  <label for="est_madeira">Uma água</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="estrutura_telhado"
+                    value="mais-de-uma-agua"
+                    id="mais-de-uma-agua"
+                  />
+                  <label for="est_metalica">Mais de uma água</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="estrutura_telhado"
+                    value="shed"
+                    id="shed"
+                  />
+                  <label for="est_pre">Shed</label>
+                </div>
+
+                  <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="estrutura_telhado"
+                    value="plano"
+                    id="plano"
+                  />
+                  <label for="est_pre">Plano</label>
+                </div>
+
+                  <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="estrutura_telhado"
+                    value="argo"
+                    id="argo"
+                  />
+                  <label for="est_pre">Argo</label>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Existem telha quebradas?:</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="estrutura_telhado"
+                    value="sim"
+                    id="quebrada-sim"
+                  />
+                  <label for="est_madeira">Sim</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="estrutura_telhado"
+                    value="nao"
+                    id="quebrada-nao"
+                  />
+                  <label for="est_metalica">Não</label>
+                </div>
+                
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label>A alvenaria possui fissuras?</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="fissuras"
+                    value="sim"
+                    id="fiss_sim"
+                  />
+                  <label for="fiss_sim">Sim</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="fissuras"
+                    value="nao"
+                    id="fiss_nao"
+                  />
+                  <label for="fiss_nao">Não</label>
+                </div>
+              </div>
+              <textarea
+                name="fissuras_obs"
+                placeholder="Observações sobre fissuras..."
+                rows="2"
+              ></textarea>
+
+            <div class="form-group">
+              <label>Há presença de cupim na estrutura?</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input type="radio" name="cupim" value="sim" id="cupim_sim" />
+                  <label for="cupim_sim">Sim</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="radio" name="cupim" value="nao" id="cupim_nao" />
+                  <label for="cupim_nao">Não</label>
+                </div>
+              </div>
+              <textarea
+                name="cupim_obs"
+                placeholder="Observações sobre cupim..."
+                rows="2"
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label>Apresenta indícios de infiltração?</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="infiltracao"
+                    value="sim"
+                    id="inf_sim"
+                  />
+                  <label for="inf_sim">Sim</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="infiltracao"
+                    value="nao"
+                    id="inf_nao"
+                  />
+                  <label for="inf_nao">Não</label>
+                </div>
+              </div>
+              <textarea
+                name="infiltracao_obs"
+                placeholder="Observações sobre infiltração..."
+                rows="2"
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- SOMBREAMENTOS -->
+          <div class="section">
+            <h2 class="section-title">🌳 SOMBREAMENTOS E OBSTÁCULOS</h2>
+            <div class="form-group">
+              <label>Existem possíveis fontes de sombreamento?</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="sombreamento"
+                    value="sim"
+                    id="sombra_sim"
+                  />
+                  <label for="sombra_sim">Sim</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="sombreamento"
+                    value="nao"
+                    id="sombra_nao"
+                  />
+                  <label for="sombra_nao">Não</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Fontes de sombreamento:</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    name="fontes_sombra"
+                    value="predios"
+                    id="predios"
+                  />
+                  <label for="predios">Prédios</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    name="fontes_sombra"
+                    value="muros"
+                    id="muros"
+                  />
+                  <label for="muros">Muros</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    name="fontes_sombra"
+                    value="arvores"
+                    id="arvores"
+                  />
+                  <label for="arvores">Árvores</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    name="fontes_sombra"
+                    value="chamine"
+                    id="chamine"
+                  />
+                  <label for="chamine">Chaminé</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    name="fontes_sombra"
+                    value="antena"
+                    id="antena"
+                  />
+                  <label for="antena">Antena</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    name="fontes_sombra"
+                    value="caixa_agua"
+                    id="caixa_agua"
+                  />
+                  <label for="caixa_agua">Caixa d'água</label>
+                </div>
+              </div>
+              <textarea
+                name="sombreamento_obs"
+                placeholder="Observações sobre sombreamentos..."
+                rows="2"
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- INFORMAÇÕES COMPLEMENTARES -->
+          <div class="section">
+            <h2 class="section-title">📋 INFORMAÇÕES COMPLEMENTARES</h2>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Potência do transformador (KVA):</label>
+                <input type="number" name="potencia_transformador" />
+              </div>
+              <div class="form-group">
+                <label>Há necessidade de topografia?</label>
+                <div class="checkbox-group">
+                  <div class="checkbox-item">
+                    <input
+                      type="radio"
+                      name="topografia"
+                      value="sim"
+                      id="topo_sim"
+                    />
+                    <label for="topo_sim">Sim</label>
+                  </div>
+                  <div class="checkbox-item">
+                    <input
+                      type="radio"
+                      name="topografia"
+                      value="nao"
+                      id="topo_nao"
+                    />
+                    <label for="topo_nao">Não</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>A edificação possui projeto estrutural?</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="projeto_estrutural"
+                    value="sim"
+                    id="proj_sim"
+                  />
+                  <label for="proj_sim">Sim</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="projeto_estrutural"
+                    value="nao"
+                    id="proj_nao"
+                  />
+                  <label for="proj_nao">Não</label>
+                </div>
+              </div>
+              <textarea
+                name="projeto_estrutural_obs"
+                placeholder="Observações sobre projeto estrutural..."
+                rows="2"
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- GRUPO GERADOR -->
+          <div class="section">
+            <h2 class="section-title">⚡ GRUPO GERADOR</h2>
+            <div class="form-group">
+              <label>Existe grupo gerador no local?</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="grupo_gerador"
+                    value="sim"
+                    id="ger_sim"
+                  />
+                  <label for="ger_sim">Sim</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="grupo_gerador"
+                    value="nao"
+                    id="ger_nao"
+                  />
+                  <label for="ger_nao">Não</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Bitola entre gerador e ponto de conexão:</label>
+                <input type="text" name="bitola_gerador" />
+              </div>
+              <div class="form-group">
+                <label>Corrente do disjuntor do grupo gerador:</label>
+                <input type="number" name="corrente_gerador" />
+              </div>
+            </div>
+          </div>
+
+          <!-- FOTOS E OBSERVAÇÕES FINAIS -->
+          <div class="section">
+            <h2 class="section-title">📸 FOTOS E OBSERVAÇÕES FINAIS</h2>
+            <div class="form-group">
+              <label>Observações gerais da vistoria:</label>
+              <textarea
+                name="observacoes_gerais"
+                placeholder="Descreva observações importantes, condições especiais, recomendações..."
+                rows="5"
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label>Checklist de fotos obrigatórias:</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    name="fotos_check"
+                    value="fachada"
+                    id="foto_fachada"
+                  />
+                  <label for="foto_fachada">Fachada (mín. 6 fotos)</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    name="fotos_check"
+                    value="sombreamentos"
+                    id="foto_sombra"
+                  />
+                  <label for="foto_sombra">Sombreamentos (mín. 6 fotos)</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    name="fotos_check"
+                    value="transformador"
+                    id="foto_transf"
+                  />
+                  <label for="foto_transf">Transformador e placa</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    name="fotos_check"
+                    value="medidor"
+                    id="foto_medidor"
+                  />
+                  <label for="foto_medidor">Medidor e disjuntor</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    name="fotos_check"
+                    value="qgbt"
+                    id="foto_qgbt"
+                  />
+                  <label for="foto_qgbt">QGBT e quadros</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    name="fotos_check"
+                    value="inversor"
+                    id="foto_inversor"
+                  />
+                  <label for="foto_inversor">Local do inversor</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    name="fotos_check"
+                    value="estrutura"
+                    id="foto_estrutura"
+                  />
+                  <label for="foto_estrutura">Estrutura do telhado</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="photo-upload">
+              <p>📷 Upload de Fotos da Vistoria</p>
+              <input
+                type="file"
+                name="fotos_vistoria"
+                multiple
+                accept="image/*"
+              />
+              <p><small>Selecione múltiplas fotos da vistoria</small></p>
+            </div>
+          </div>
+
+          <div class="btn-group">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              onclick="gerarResumo()"
+            >
+              📋 Gerar Resumo
+            </button>
+            <button
+              type="button"
+              class="whatsapp-btn"
+              onclick="enviarWhatsApp()"
+            >
+              Enviar para WhatsApp
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal para mostrar resumo -->
+    <div
+      id="resumoModal"
+      style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+        overflow-y: auto;
+      "
+    >
+      <div
+        style="
+          background: white;
+          margin: 20px;
+          border-radius: 15px;
+          padding: 30px;
+          max-width: 800px;
+          margin: 20px auto;
+        "
+      >
+        <h2 style="color: #e67e22; margin-bottom: 20px">
+          📋 Resumo da Vistoria Técnica
+        </h2>
+        <div id="resumoConteudo"></div>
+        <div style="text-align: center; margin-top: 30px">
+          <button
+            class="btn btn-secondary"
+            onclick="fecharResumo()"
+            style="margin-right: 15px"
+          >
+            Fechar
+          </button>
+          <button class="whatsapp-btn" onclick="enviarWhatsApp()">
+            Enviar para WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./src/js/scripts.js"></script>
+  </body>
+</html>
