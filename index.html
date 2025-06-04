@@ -308,7 +308,7 @@
 
           <!-- MEDIDAS ESTRUTURAIS -->
           <div class="section">
-            <h2 class="section-title">MEDIDAS ESTRUTURAIS</h2>
+            <h2 class="section-title"> 📏 MEDIDAS ESTRUTURAIS</h2>
             <div class="form-group">
               <label>Medidas estruturais:</label>
               <div class="measurements-grid">
@@ -374,6 +374,134 @@
             </div>
           </div>
 
+          <!--CONDIÇÕES DO TELHADO-->
+          <div class="section">
+            <h2 class="section-title"> 🏠 CONDIÇÕES DO TELHADO</h2>
+            <div class="form-group">
+              <label>Tipo de telha:</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="tipo-telha"
+                    value="ceramica"
+                    id="telha-ceramica"
+                  />
+                  <label for="est_madeira">Cerâmica</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="tipo-telha"
+                    value="metalica"
+                    id="telha-metalica"
+                  />
+                  <label for="est_metalica">Metálica</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="tipo-telha"
+                    value="fibracimento"
+                    id="telha-fibracimento"
+                  />
+                  <label for="est_pre">Fibracimento</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Tipo de telhado:</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="tipo-telhado"
+                    value="uma-agua"
+                    id="uma-agua"
+                  />
+                  <label for="est_madeira">Uma água</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="tipo-telhado"
+                    value="mais-de-uma-agua"
+                    id="mais-de-uma-agua"
+                  />
+                  <label for="est_metalica">Mais de uma água</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="tipo-telhado"
+                    value="telhado-arqueado"
+                    id="telhado-arqueado"
+                  />
+                  <label for="est_pre">Telhado arqueado</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="tipo-telhado"
+                    value="plano"
+                    id="telhado-plano"
+                  />
+                  <label for="est_madeira">Plano</label>
+                </div>
+              </div>
+            </div>
+
+             <div class="form-group">
+              <label>Telhado precisa de manutenção? :</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="manutencao-telhado"
+                    value="sim"
+                    id="manutencao"
+                  />
+                  <label for="est_madeira">Sim</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="manutencao-telhado"
+                    value="nao"
+                    id="manutencao"
+                  />
+                  <label for="est_metalica">Não</label>
+                </div>
+              </div>
+            </div>
+
+             <div class="form-group">
+              <label>Telhas quebradas? :</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="telhas-quebradas"
+                    value="sim"
+                    id="telhas-quebradas"
+                  />
+                  <label for="est_madeira">Sim</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="telhas-quebradas"
+                    value="nao"
+                    id="telhas-quebradas"
+                  />
+                  <label for="est_metalica">Não</label>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
           <!-- CONDIÇÕES ESTRUTURAIS -->
           <div class="section">
             <h2 class="section-title">🏗️ CONDIÇÕES ESTRUTURAIS</h2>
@@ -418,119 +546,6 @@
                 </div>
               </div>
             </div>
-
-            <div class="form-group">
-              <label>Tipo de telha:</label>
-              <div class="checkbox-group">
-                <div class="checkbox-item">
-                  <input
-                    type="radio"
-                    name="estrutura_telhado"
-                    value="ceramica"
-                    id="ceramica"
-                  />
-                  <label for="est_madeira">Cerâmica</label>
-                </div>
-                <div class="checkbox-item">
-                  <input
-                    type="radio"
-                    name="estrutura_telhado"
-                    value="metalica"
-                    id="est_metalica"
-                  />
-                  <label for="est_metalica">Metálica</label>
-                </div>
-                <div class="checkbox-item">
-                  <input
-                    type="radio"
-                    name="estrutura_telhado"
-                    value="fibracimento"
-                    id="fibracimento"
-                  />
-                  <label for="est_pre">Fibracimento</label>
-                </div>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label>Tipo de telhado:</label>
-              <div class="checkbox-group">
-                <div class="checkbox-item">
-                  <input
-                    type="radio"
-                    name="estrutura_telhado"
-                    value="uma-agua"
-                    id="uma-agua"
-                  />
-                  <label for="est_madeira">Uma água</label>
-                </div>
-                <div class="checkbox-item">
-                  <input
-                    type="radio"
-                    name="estrutura_telhado"
-                    value="mais-de-uma-agua"
-                    id="mais-de-uma-agua"
-                  />
-                  <label for="est_metalica">Mais de uma água</label>
-                </div>
-                <div class="checkbox-item">
-                  <input
-                    type="radio"
-                    name="estrutura_telhado"
-                    value="shed"
-                    id="shed"
-                  />
-                  <label for="est_pre">Shed</label>
-                </div>
-
-                  <div class="checkbox-item">
-                  <input
-                    type="radio"
-                    name="estrutura_telhado"
-                    value="plano"
-                    id="plano"
-                  />
-                  <label for="est_pre">Plano</label>
-                </div>
-
-                  <div class="checkbox-item">
-                  <input
-                    type="radio"
-                    name="estrutura_telhado"
-                    value="argo"
-                    id="argo"
-                  />
-                  <label for="est_pre">Argo</label>
-                </div>
-                
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label>Existem telha quebradas?:</label>
-              <div class="checkbox-group">
-                <div class="checkbox-item">
-                  <input
-                    type="radio"
-                    name="estrutura_telhado"
-                    value="sim"
-                    id="quebrada-sim"
-                  />
-                  <label for="est_madeira">Sim</label>
-                </div>
-                <div class="checkbox-item">
-                  <input
-                    type="radio"
-                    name="estrutura_telhado"
-                    value="nao"
-                    id="quebrada-nao"
-                  />
-                  <label for="est_metalica">Não</label>
-                </div>
-                
-              </div>
-            </div>
-
 
             <div class="form-group">
               <label>A alvenaria possui fissuras?</label>

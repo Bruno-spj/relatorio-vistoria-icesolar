@@ -80,8 +80,7 @@
       • Tipo de telhado: ${formData.get('tipo_telhado') || 'Não informado'}
       • Precisa manutenção: ${formData.get('telhado_manutencao') || 'Não informado'}
       • Telhas quebradas: ${formData.get('telhas_quebradas') || 'Não informado'}
-      • Inclinação: ${formData.get('inclinacao_telhado') || 'N/I'}°
-
+      
       🏗️ *ESTRUTURA*
       • Tipo de estrutura: ${formData.get('estrutura_telhado') || 'Não informado'}
       • Fissuras na alvenaria: ${formData.get('fissuras') || 'Não informado'}
@@ -95,7 +94,7 @@
                   // Adicionar fontes de sombra se existirem
                   const fontesSombra = formData.getAll('fontes_sombra');
                   if (fontesSombra.length > 0) {
-                      resumo += `• Tipos: ${fontes Sombra.join(', ')}\n`;
+                      resumo += `• Tipos: ${fontes} Sombra.join(', ')}\n`;
                   }
 
                   // Adicionar grupo gerador se existir
