@@ -75,7 +75,7 @@ function gerarResumo() {
 
       🔧 *INVERSOR E STRING BOX*
       • Localização sugerida: ${
-        formData.get("inversor_localizacao") || "Não informado"
+        formData.get("local_inversor") || "Não informado"
       }
       • Internet no local: ${formData.get("internet_local") || "Não informado"}
 

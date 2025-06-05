@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="src/css/style.css" />
     <link rel="stylesheet" href="src/css/reset.css" />
     <link rel="stylesheet" href="src/css/responsivo.css" />
+    <link rel="shortcut icon" href="./src/imagens/logo-icesolar.jpeg" type="image/x-icon">
     <title>ICE Solar - Vistoria Técnica</title>
   </head>
   <body>
@@ -242,6 +243,31 @@
               </div>
             </div>
 
+             <div class="form-group">
+              <label>PDE está no externo a residência?</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="pde_externo"
+                    value="sim"
+                    id="pde_externo"
+                  />
+                  <label for="pde_sim">Sim</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="pde_externo"
+                    value="nao"
+                    id="pde_externo"
+                  />
+                  <label for="pde_nao">Não</label>
+                </div>
+              </div>
+            </div>
+
+
             <div class="form-group">
               <label for="numero_medidor">Número do medidor:</label>
               <input
@@ -256,8 +282,8 @@
               <label for="amperagem_disjuntor">Amperagem do disjuntor PDE:</label>
               <input
                 type="number"
-                name="amperagem_disjuntor"
-                id="amperagem_disjuntor"
+                name="corrente_disjuntor_pde"
+                id="corrente_disjuntor_pde"
                 placeholder="Ex: 63"
               />
             </div>
@@ -332,10 +358,7 @@
                   <label>Largura do Telhado:</label>
                   <input type="text" name="larg_telhado" />
                 </div>
-                <div class="form-group">
-                  <label>Inclinação do Telhado (º):</label>
-                  <input type="number" name="inclinacao_telhado" />
-                </div>
+                
               </div>
             </div>
           </div>
@@ -383,27 +406,27 @@
                 <div class="checkbox-item">
                   <input
                     type="radio"
-                    name="tipo-telha"
+                    name="tipo_telha"
                     value="ceramica"
-                    id="telha-ceramica"
+                    id="tipo_telha"
                   />
                   <label for="est_madeira">Cerâmica</label>
                 </div>
                 <div class="checkbox-item">
                   <input
                     type="radio"
-                    name="tipo-telha"
+                    name="tipo_telha"
                     value="metalica"
-                    id="telha-metalica"
+                    id="tipo_telha"
                   />
                   <label for="est_metalica">Metálica</label>
                 </div>
                 <div class="checkbox-item">
                   <input
                     type="radio"
-                    name="tipo-telha"
+                    name="tipo_telha"
                     value="fibracimento"
-                    id="telha-fibracimento"
+                    id="tipo_telha"
                   />
                   <label for="est_pre">Fibracimento</label>
                 </div>
@@ -416,36 +439,36 @@
                 <div class="checkbox-item">
                   <input
                     type="radio"
-                    name="tipo-telhado"
+                    name="tipo_telhado"
                     value="uma-agua"
-                    id="uma-agua"
+                    id="tipo_telhado"
                   />
                   <label for="est_madeira">Uma água</label>
                 </div>
                 <div class="checkbox-item">
                   <input
                     type="radio"
-                    name="tipo-telhado"
+                    name="tipo_telhado"
                     value="mais-de-uma-agua"
-                    id="mais-de-uma-agua"
+                    id="tipo_telhado"
                   />
                   <label for="est_metalica">Mais de uma água</label>
                 </div>
                 <div class="checkbox-item">
                   <input
                     type="radio"
-                    name="tipo-telhado"
+                    name="tipo_telhado"
                     value="telhado-arqueado"
-                    id="telhado-arqueado"
+                    id="tipo_telhado"
                   />
                   <label for="est_pre">Telhado arqueado</label>
                 </div>
                 <div class="checkbox-item">
                   <input
                     type="radio"
-                    name="tipo-telhado"
+                    name="tipo_telhado"
                     value="plano"
-                    id="telhado-plano"
+                    id="tipo_telhado"
                   />
                   <label for="est_madeira">Plano</label>
                 </div>
@@ -458,18 +481,18 @@
                 <div class="checkbox-item">
                   <input
                     type="radio"
-                    name="manutencao-telhado"
+                    name="telhado_manutencao"
                     value="sim"
-                    id="manutencao"
+                    id="telhado_manutencao"
                   />
                   <label for="est_madeira">Sim</label>
                 </div>
                 <div class="checkbox-item">
                   <input
                     type="radio"
-                    name="manutencao-telhado"
+                    name="telhado_manutencao"
                     value="nao"
-                    id="manutencao"
+                    id="telhado_manutencao"
                   />
                   <label for="est_metalica">Não</label>
                 </div>
@@ -482,18 +505,18 @@
                 <div class="checkbox-item">
                   <input
                     type="radio"
-                    name="telhas-quebradas"
+                    name="telhas_quebradas"
                     value="sim"
-                    id="telhas-quebradas"
+                    id="telhas_quebradas"
                   />
                   <label for="est_madeira">Sim</label>
                 </div>
                 <div class="checkbox-item">
                   <input
                     type="radio"
-                    name="telhas-quebradas"
+                    name="telhas_quebradas"
                     value="nao"
-                    id="telhas-quebradas"
+                    id="telhas_quebradas"
                   />
                   <label for="est_metalica">Não</label>
                 </div>
