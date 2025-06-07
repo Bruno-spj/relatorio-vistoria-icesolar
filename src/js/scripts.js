@@ -86,7 +86,9 @@ function gerarResumo() {
       • QGBT ↔ PDE: ${formData.get("dist_qgbt_pde") || "N/I"}m
 
       🏠 *CONDIÇÕES DO TELHADO*
-      • Largura do Telhado: ${formData.get("larg_telhado") || "Não informado"}
+      • Condições de acesso ao telhado: ${formData.get("acesso_telhado") || "Não informado"}
+      • Tamanho do Telhado: ${formData.get("tamanho_telhado") || "Não informado"}
+      • Existe espaço suficiente para instalação (Modulos): ${formData.get("espaco_modulos") || "Não informado"}
       • Tipo de telha: ${formData.get("tipo_telha") || "Não informado"}
       • Tipo de telhado: ${formData.get("tipo_telhado") || "Não informado"}
       • Precisa manutenção: ${

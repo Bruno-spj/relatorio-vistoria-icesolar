@@ -447,6 +447,31 @@
           <!--CONDIÇÕES DO TELHADO-->
           <div class="section">
             <h2 class="section-title"> 🏠 CONDIÇÕES DO TELHADO</h2>
+
+            <div class="form-group">
+              <label>Condições de acesso ao telhado:</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="acesso_telhado"
+                    value="escada"
+                    id="acesso_escada"
+                  />
+                  <label for="est_madeira">Escada</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="acesso_telhado"
+                    value="andame"
+                    id="acesso_andame"
+                  />
+                  <label for="est_metalica">Andame</label>
+                </div>
+              </div>
+            </div>
+
             <div class="form-group">
               <label>Tipo de telha:</label>
               <div class="checkbox-group">
@@ -455,7 +480,7 @@
                     type="radio"
                     name="tipo_telha"
                     value="ceramica"
-                    id="tipo_telha"
+                    id="est_madeira"
                   />
                   <label for="est_madeira">Cerâmica</label>
                 </div>
@@ -464,7 +489,7 @@
                     type="radio"
                     name="tipo_telha"
                     value="metalica"
-                    id="tipo_telha"
+                    id="est_metalica"
                   />
                   <label for="est_metalica">Metálica</label>
                 </div>
@@ -473,22 +498,46 @@
                     type="radio"
                     name="tipo_telha"
                     value="fibracimento"
-                    id="tipo_telha"
+                    id="est_fibracimento"
                   />
-                  <label for="est_pre">Fibracimento</label>
+                  <label for="est_fibracimento">Fibracimento</label>
                 </div>
               </div>
             </div>
 
             <div class="form-group">
-                  <label>Comprimento do Telhado:</label>
+                  <label>Tamanho do Telhado:</label>
                   <input 
                   type="text" 
-                  name="larg_telhado" 
-                  id="larg_telhado"
+                  name="tamanho_telhado" 
+                  id="tamanho_telhado"
                   placeholder="Ex: Largura x Comprimento"
                   />
               </div>
+
+             <div class="form-group">
+              <label>Existe espaço suficiente para instalação (Modulos):?</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="espaco_modulos"
+                    value="sim"
+                    id="espaco_modulos_sim"
+                  />
+                  <label for="espaco_modulos_sim">Sim</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="radio"
+                    name="espaco_modulos"
+                    value="nao"
+                    id="espaco_modulos_nao"
+                  />
+                  <label for="espaco_modulos_nao">Não</label>
+                </div>
+              </div>
+            </div> 
 
             <div class="form-group">
               <label>Tipo de telhado:</label>
