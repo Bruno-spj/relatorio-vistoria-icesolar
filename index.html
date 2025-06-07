@@ -244,7 +244,7 @@
             </div>
 
              <div class="form-group">
-              <label>PDE está no externo a residência?</label>
+              <label>PDE está externo a residência?</label>
               <div class="checkbox-group">
                 <div class="checkbox-item">
                   <input
@@ -444,72 +444,6 @@
             </div>
           </div>
 
-
-          <!-- MEDIDAS ESTRUTURAIS -->
-          <div class="section">
-            <h2 class="section-title"> 📏 MEDIDAS ESTRUTURAIS</h2>
-            <div class="form-group">
-              <label>Medidas estruturais:</label>
-              <div class="measurements-grid">
-                <div class="form-group">
-                  <label>Distância entre Terças:</label>
-                  <input type="text" name="dist_tercas" />
-                </div>
-                <div class="form-group">
-                  <label>Distância entre Ripas:</label>
-                  <input type="text" name="dist_ripas" />
-                </div>
-                <div class="form-group">
-                  <label>Distância entre Caibros:</label>
-                  <input type="text" name="dist_caibros" />
-                </div>
-                <div class="form-group">
-                  <label>Comprimento do Telhado:</label>
-                  <input type="text" name="compr_telhado" />
-                </div>
-                <div class="form-group">
-                  <label>Largura do Telhado:</label>
-                  <input type="text" name="larg_telhado" />
-                </div>
-                
-              </div>
-            </div>
-          </div>
-          <!-- SEÇÕES -->
-          <div class="form-group">
-            <label>Seções (em cm x cm):</label>
-            <div class="measurements-grid">
-              <div class="form-group">
-                <label>Terça:</label>
-                <input
-                  type="text"
-                  name="secao_terca"
-                  placeholder="ex: 5 x 15"
-                />
-              </div>
-              <div class="form-group">
-                <label>Caibro:</label>
-                <input
-                  type="text"
-                  name="secao_caibro"
-                  placeholder="ex: 5 x 7"
-                />
-              </div>
-              <div class="form-group">
-                <label>Ripa:</label>
-                <input type="text" name="secao_ripa" placeholder="ex: 1 x 5" />
-              </div>
-              <div class="form-group">
-                <label>Viga:</label>
-                <input
-                  type="text"
-                  name="secao_viga"
-                  placeholder="ex: 12 x 25"
-                />
-              </div>
-            </div>
-          </div>
-
           <!--CONDIÇÕES DO TELHADO-->
           <div class="section">
             <h2 class="section-title"> 🏠 CONDIÇÕES DO TELHADO</h2>
@@ -545,6 +479,16 @@
                 </div>
               </div>
             </div>
+
+            <div class="form-group">
+                  <label>Comprimento do Telhado:</label>
+                  <input 
+                  type="text" 
+                  name="larg_telhado" 
+                  id="larg_telhado"
+                  placeholder="Ex: Largura x Comprimento"
+                  />
+              </div>
 
             <div class="form-group">
               <label>Tipo de telhado:</label>
@@ -641,6 +585,7 @@
           <!-- CONDIÇÕES ESTRUTURAIS -->
           <div class="section">
             <h2 class="section-title">🏗️ CONDIÇÕES ESTRUTURAIS</h2>
+           
             <div class="form-group">
               <label>Tipo de estrutura do telhado:</label>
               <div class="checkbox-group">
@@ -682,6 +627,8 @@
                 </div>
               </div>
             </div>
+
+              
 
             <div class="form-group">
               <label>A alvenaria possui fissuras?</label>
@@ -759,7 +706,7 @@
               ></textarea>
             </div>
           </div>
-
+        </div> 
           <!-- SOMBREAMENTOS -->
           <div class="section">
             <h2 class="section-title">🌳 SOMBREAMENTOS E OBSTÁCULOS</h2>
